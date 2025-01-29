@@ -10,7 +10,7 @@ const userSchema = new mongoose.Schema(
       unique: true, 
       match: /[^@\s]+@[^@\s]+\.[^@\s]+/, 
     },
-    password: { type: String, required: true },
+    password: { type: String, required: true }
   },
   { timestamps: true }
 );
