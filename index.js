@@ -11,8 +11,7 @@ app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
 app.use(express.json());  // Ensure this is included
 // Enable CORS
-app.use(cors({ origin: "http://localhost:3000", credentials: true }));
-
+app.use(require('cors')());
 // Middleware
 app.use(express.json());
 
