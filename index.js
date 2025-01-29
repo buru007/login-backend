@@ -8,13 +8,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Enable CORS
-app.use(cors());
-
-const corsOptions = {
-  origin: 'http://localhost:3000',  // Allow only this origin
-};
-
-app.use(cors(corsOptions));  // Apply CORS with these options
+app.use(cors({ origin: "http://localhost:3000", credentials: true }));
 
 // Middleware
 app.use(express.json());
