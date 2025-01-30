@@ -8,7 +8,7 @@ const app = express();
 const PORT = process.env.PORT || 5000; // Use Render's assigned port
 // Middleware
 app.use(express.json());  
-app.use(cors({ origin: "https://your-frontend.onrender.com" }));
+app.use(cors({ origin: "http://localhost:3000" }));
 
 // Routes
 app.use('/api/auth', authRoutes);
